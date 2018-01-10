@@ -1,0 +1,329 @@
+@import "../../../uikit/light/vars.css";
+@import "../../../uikit/media.css";
+@import "../../../uikit/light/buttons.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300');
+.section {
+  min-width: 320px;
+  padding: 40px 0;
+
+  /* background-color: var(--ui-block-bg); */
+  font-size: var(--ui-text-size);
+  font-family: var(--ui-text-font-family);
+  color: var(--ui-text-color);
+  line-height: var(--ui-text-line-height);
+  font-weight: var(--ui-text-font-weight);
+  word-wrap: break-word;
+
+  &--no-icon {
+
+    @media (--ui-tablet-devices) {
+      .plan--main {
+        .plan__title {
+          margin-bottom: 35px;
+        }
+
+        .plan__button {
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+
+  @media (--ui-medium-devices) {
+    padding: 80px 0;
+  }
+
+  &__inner {
+    max-width: var(--ui-content-container);
+    margin: 0 auto;
+    padding: var(--ui-content-gutter);
+  }
+}
+
+.title {
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: var(--ui-block-title-font-family);
+  font-size: var(--ui-block-title-size);
+  font-weight: var(--ui-block-title-font-weight);
+  line-height: var(--ui-block-title-line-height);
+  color: var(--ui-block-title-color);
+}
+
+.subtitle {
+  max-width: 688px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--ui-subtitle-font-family);
+  font-size: var(--ui-subtitle-size);
+  font-weight: var(--ui-subtitle-font-weight);
+  line-height: var(--ui-subtitle-line-height);
+  color: var(--ui-subtitle-color);
+
+  @media (--ui-medium-devices) {
+    max-width: 770px;
+  }
+}
+
+.plans-wrapper {
+  display: flex;
+  margin-top: 60px;
+  margin-left: -15px;
+  margin-right: -15px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (--ui-medium-devices) {
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.plan {
+  padding: 50px 20px;
+  flex-basis: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: #ebeaea;
+
+  @media (--ui-tablet-devices) {
+    flex-basis: 33.3333%;
+    max-width: 33.3333%;
+  }
+
+  @media (--ui-medium-devices) {
+    padding: 50px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    font-family: var(--ui-heading-font-family);
+    font-size: var(--ui-heading-size);
+    font-weight: var(--ui-heading-font-weight);
+    line-height: var(--ui-heading-line-height);
+    color: var(--ui-heading-color);
+  }
+
+  &__icon-wrapper {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background-color: var(--ui-media-bg);
+    color: var(--ui-icon-color);
+  }
+
+  &__price {
+    font-family: var(--ui-caption-font-family);
+    font-size: var(--ui-caption-size);
+    font-weight: var(--ui-caption-font-weight);
+    line-height: var(--ui-caption-line-height);
+    color: var(--ui-caption-color);
+    margin-bottom: 30px;
+
+    &-count {
+      display: block;
+      font-family: var(--ui-heading-lg-font-family);
+      font-size: var(--ui-heading-lg-size);
+      font-weight: var(--ui-heading-lg-font-weight);
+      line-height: var(--ui-heading-lg-line-height);
+      color: var(--ui-heading-lg-color);
+    }
+  }
+
+  &__list {
+    &-item {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    margin-top: 40px;
+
+    @media (--ui-tablet-devices) {
+      width: auto;
+    }
+  }
+
+  &--main {
+    position: relative;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .3);
+
+    @media (--ui-tablet-devices) {
+      margin-top: -20px;
+      margin-bottom: -30px;
+    }
+
+    .plan__title {
+      font-weight: 500;
+    }
+
+    .plan__icon-wrapper {
+      width: 90px;
+      height: 90px;
+    }
+
+    .plan__button {
+      margin-top: 45px;
+    }
+  }
+}
+
+.btns-group {
+  margin-top: 30px;
+  text-align: center;
+
+  @media (--ui-tablet-devices) {
+    margin-top: 90px;
+  }
+
+  .button {
+    width: 100%;
+
+    @media (--ui-phone-devices) {
+      width: auto;
+      margin-right: 30px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.link {
+  color: var(--ui-link-color);
+  transition: color 0.2s ease-out;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--ui-link-hover-color);
+  }
+}
+
+/* stylelint-disable */
+
+html{
+  background-color : #fff;
+}
+
+
+.title{
+  font-size: 34px;
+  font-family: "Roboto Slab", serif;
+  color:  #323435;
+  font-weight: 700;
+  line-height: 1.3529;
+}
+.subtitle{
+  size: 20px;
+  color: #838587;
+  line-height: 1.5;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+}
+
+.plan__icon-wrapper{
+  min-height: 150px;
+}
+.plan__icon-wrapper:after{
+  border-bottom: 4px solid black;
+  min-width: 100%;
+}
+
+.plan__icon-wrapper svg{
+  width:100%;
+  margin-left: 137%;
+}
+.plan--main .plan__icon-wrapper svg{
+  margin-left: 110%;
+}
+.plan--main .plan__icon-wrapper{
+  background-color: #d70044;
+}
+.plan svg{
+  fill : #d70044;
+}
+.plan__icon-wrapper{
+  color : #d70044;
+}
+
+.plan--main svg{
+  fill :white;
+}
+
+.plan__icon-wrapper svg{
+  position: relative;
+  left:-100px;
+}
+
+hr {
+  border: none;
+  width : 10%;
+  background-color: #d70044;
+  color: #d70044; /* Цвет линии для IE6-7 */
+  height: 3px;
+  position: relative;
+  top  : -20px;
+}
+
+.plan--main hr{
+  background-color: white;
+  color : white;
+}
+
+.plan{
+  background-color: #f7f7f7;
+}
+.plan--main{
+  background-color: #d70044;
+}
+.plan--main .plan__price-count{
+  color:white;
+}
+.plan--main .button{
+  background-color: white;
+  color:black;
+}
+.plan--main .plan__list-item{
+  color: white;
+}
+.plan--main .plan__title{
+  color : white;
+}
+.plan--main .plan__price-text{
+  color : #e5a6ba;
+}
+
+.plan__price-count{
+  font-size: 80px;
+  color: #323435;
+  line-height: 1.125;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+}
+
+.plan__list li{
+  font-size: 16px;
+  color: #6e7173;
+  line-height: 1.625;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+}
+
+.button--secondary{
+  font-weight: bold;
+}
+
+
+/* stylelint-enable */
