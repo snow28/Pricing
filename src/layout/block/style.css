@@ -235,10 +235,22 @@ html{
 
 .plan__icon-wrapper{
   min-height: 150px;
+  border:none;
+  position: relative;
 }
 .plan__icon-wrapper:after{
-  border-bottom: 4px solid black;
-  min-width: 100%;
+  width : 40%;
+  margin-left: 30%;
+  position: absolute;
+  background-color: #d70044;
+  content: '';
+  bottom:0;
+  left:0;
+  height: 4px;
+}
+
+.plan--main .plan__icon-wrapper:after{
+  background-color : white;
 }
 
 .plan__icon-wrapper svg{
@@ -265,21 +277,6 @@ html{
 .plan__icon-wrapper svg{
   position: relative;
   left:-100px;
-}
-
-hr {
-  border: none;
-  width : 10%;
-  background-color: #d70044;
-  color: #d70044; /* Цвет линии для IE6-7 */
-  height: 3px;
-  position: relative;
-  top  : -20px;
-}
-
-.plan--main hr{
-  background-color: white;
-  color : white;
 }
 
 .plan{
