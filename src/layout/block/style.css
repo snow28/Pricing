@@ -1,9 +1,6 @@
 @import "../../../uikit/light/vars.css";
 @import "../../../uikit/media.css";
 @import "../../../uikit/light/buttons.css";
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300');
 .section {
   min-width: 320px;
   padding: 40px 0;
@@ -212,115 +209,98 @@
 }
 
 /* stylelint-disable */
-
-html{
-  background-color : #fff;
+.section{
+  background-color: var(--ui-block-bg);
 }
-
-
 .title{
-  font-size: 34px;
-  font-family: "Roboto Slab", serif;
-  color:  #323435;
-  font-weight: 700;
-  line-height: 1.3529;
+  font-size: var(--ui-block-title-size);
+  color: var(--ui-block-title-color);
+  line-height: var(--ui-block-title-line-height);
+  font-family: var(--ui-block-title-font-family);
+  font-weight: var(--ui-block-title-font-weight);
 }
 .subtitle{
-  size: 20px;
-  color: #838587;
-  line-height: 1.5;
-  font-family: "Roboto Slab", serif;
-  font-weight: 400;
+  font-size: var(--ui-subtitle-size);
+  color: var(--ui-subtitle-color);
+  line-height: var(--ui-subtitle-line-height);
+  font-family: var(--ui-subtitle-font-family);
+  font-weight: var(--ui-subtitle-font-weight);
 }
-
-.plan__icon-wrapper{
-  min-height: 150px;
-  border:none;
-  position: relative;
+.plan {
+  background-color: var(--ui-light-accent-color);
+  svg{
+    fill: var(--ui-brand-color);
+  }
+  &__icon-wrapper {
+    color: var(--ui-brand-color);
+    min-height: 150px;
+    border: none;
+    position: relative;
+    &:after {
+      width: 40%;
+      margin-left: 30%;
+      position: absolute;
+      background-color: var(--ui-brand-color);
+      content: '';
+      bottom: 0;
+      left: 0;
+      height: 4px;
+    }
+    svg {
+      width: 100%;
+      margin-left: 0%;
+      position: relative;
+    }
+  }
+  &--main{
+    background-color: var(--ui-brand-color);
+    .plan__icon-wrapper{
+      background-color: var(--ui-brand-color);
+      &:after {
+        background-color: var(--ui-light-shade-color);
+      }
+      svg {
+        margin-left: 0%;
+        fill: var(--ui-light-shade-color);
+      }
+    }
+    .plan__price-count{
+      color:var(--ui-light-shade-color);
+    }
+    .button{
+      background-color: var(--ui-light-shade-color);
+      color:var(--ui-dark-accent-color);
+    }
+    .plan__list-item{
+      color:var(--ui-light-shade-color);
+    }
+    .plan__title{
+      color:var(--ui-light-shade-color);
+    }
+    .plan__price-text{
+      color:#e5a6ba;
+    }
+  }
+  &__price-count{
+     font-size: var(--ui-hero-title-size);
+     color: var(--ui-hero-title-color);
+     line-height: var(--ui-hero-title-line-height);
+     font-family: var(--ui-hero-title-font-family);
+     font-weight: var(--ui-hero-title-font-weight);
+   }
+   &__list li{
+      font-size: var(--ui-text-size);
+      color: var(--ui-text-color);
+      line-height: var(--ui-text-line-height);
+      font-family: var(--ui-text-font-family);
+      font-weight: var(--ui-text-font-weight);
+    }
 }
-.plan__icon-wrapper:after{
-  width : 40%;
-  margin-left: 30%;
-  position: absolute;
-  background-color: #d70044;
-  content: '';
-  bottom:0;
-  left:0;
-  height: 4px;
-}
-
-.plan--main .plan__icon-wrapper:after{
-  background-color : white;
-}
-
-.plan__icon-wrapper svg{
-  width:100%;
-  margin-left: 137%;
-}
-.plan--main .plan__icon-wrapper svg{
-  margin-left: 110%;
-}
-.plan--main .plan__icon-wrapper{
-  background-color: #d70044;
-}
-.plan svg{
-  fill : #d70044;
-}
-.plan__icon-wrapper{
-  color : #d70044;
-}
-
-.plan--main svg{
-  fill :white;
-}
-
-.plan__icon-wrapper svg{
-  position: relative;
-  left:-100px;
-}
-
-.plan{
-  background-color: #f7f7f7;
-}
-.plan--main{
-  background-color: #d70044;
-}
-.plan--main .plan__price-count{
-  color:white;
-}
-.plan--main .button{
-  background-color: white;
-  color:black;
-}
-.plan--main .plan__list-item{
-  color: white;
-}
-.plan--main .plan__title{
-  color : white;
-}
-.plan--main .plan__price-text{
-  color : #e5a6ba;
-}
-
-.plan__price-count{
-  font-size: 80px;
-  color: #323435;
-  line-height: 1.125;
-  font-family: "Roboto Slab", serif;
-  font-weight: 400;
-}
-
-.plan__list li{
-  font-size: 16px;
-  color: #6e7173;
-  line-height: 1.625;
-  font-family: "Roboto Slab", serif;
-  font-weight: 300;
-}
-
 .button--secondary{
   font-weight: bold;
 }
+
+
 
 
 /* stylelint-enable */
